@@ -13,3 +13,5 @@ Currently, two official plugins are available:
 - Server Execution
 - cd server
 - npm start
+Client side install below two packages
+
