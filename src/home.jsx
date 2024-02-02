@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar'; // Import the Navbar component
+import Navbar from './NavBar'; // Import the Navbar component
 import { useNavigate } from 'react-router-dom';
 
 
