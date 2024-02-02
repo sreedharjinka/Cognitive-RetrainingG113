@@ -30,7 +30,7 @@ function validateGridNumber(gridNumber: number) {
 export default function MemoryGame(
     {
         containerStyle = {},
-        gridNumber = 4,
+         = 4,
         foundPair = () => undefined,
         notFoundPair = () => undefined,
         gameFinished = () => undefined,
@@ -165,7 +165,7 @@ import {availableCardStatuses} from "./consts";
 
 interface MemoryGameProps {
     containerStyle?: CSSProperties,
-    gridNumber: number,
+    gridnumber: number,
     foundPair?: Function,
     notFoundPair?: Function,
     gameFinished?: Function,
@@ -175,8 +175,8 @@ interface MemoryGameProps {
     backCardsCss?: string
 }
 
-function validategridnumber(gridNumber: number) {
-    if (!Number.isInteger(gridNumber) || !(gridNumber >= 4 && gridNumber <= 6))
+function validategridnumber(gridnumber: number) {
+    if (!Number.isInteger(gridnumber) || !(gridnumber >= 4 && gridnumber <= 6))
         throw new Error("grid number must be an Integer number between 4 and 6")
     return null
 }
@@ -184,7 +184,7 @@ function validategridnumber(gridNumber: number) {
 export default function MemoryGame(
     {
         containerStyle = {},
-        gridNumber = 4,
+        gridnumber = 4,
         foundPair = () => undefined,
         notFoundPair = () => undefined,
         gameFinished = () => undefined,
@@ -193,8 +193,8 @@ export default function MemoryGame(
         frontCardsCss = '',
         backCardsCss = ''
     }: MemoryGameProps) {
-    useState(validategridnumber(gridNumber))
-    const [iconsGrid] = useState<React.ReactNode[]>(getGeneratedGrid(gridNumber)) // <-- Initialize the grid just one time, only when this component is mounted
+    useState(validategridnumber(gridnumber))
+    const [iconsGrid] = useState<React.ReactNode[]>(getGeneratedGrid(gridnumber)) // <-- Initialize the grid just one time, only when this component is mounted
     const [cardStatuses, setCardsStatuses] = useState<string[]>(iconsGrid.map(_ => availableCardStatuses.hole))
     
 
