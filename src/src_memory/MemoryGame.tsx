@@ -175,7 +175,7 @@ interface MemoryGameProps {
     backCardsCss?: string
 }
 
-function validateGridNumber(gridNumber: number) {
+function validategridnumber(gridNumber: number) {
     if (!Number.isInteger(gridNumber) || !(gridNumber >= 4 && gridNumber <= 6))
         throw new Error("grid number must be an Integer number between 4 and 6")
     return null
@@ -193,7 +193,7 @@ export default function MemoryGame(
         frontCardsCss = '',
         backCardsCss = ''
     }: MemoryGameProps) {
-    useState(validateGridNumber(gridNumber))
+    useState(validategridnumber(gridNumber))
     const [iconsGrid] = useState<React.ReactNode[]>(getGeneratedGrid(gridNumber)) // <-- Initialize the grid just one time, only when this component is mounted
     const [cardStatuses, setCardsStatuses] = useState<string[]>(iconsGrid.map(_ => availableCardStatuses.hole))
     
