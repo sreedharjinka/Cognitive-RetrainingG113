@@ -7,6 +7,18 @@
     justify-content: center;
     align-items: center;
 }
+.reset-button{
+    display: flex;
+    justify-content: center;
+    padding : 10px 950px; 
+    
+}
+.Back-button{
+    display: flex;
+    padding : 10px 910px; 
+
+    
+}
 
 .MemoryGame_gridTemplateColumns4 {
     grid-template-columns: repeat(4, 85px)
