@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ForgotPassword.css';
+import './forgotPassword.css';
 import axios from 'axios';
 
 function ForgotPassword() {
